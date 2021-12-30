@@ -18,7 +18,7 @@ object TransformTest {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     env.setParallelism(1)
     // 0.读取数据
-    val inputPath = "D:\\Projects\\BigData\\FlinkTutorial\\src\\main\\resources\\sensor.txt"
+    val inputPath = "/Users/mengxi.liu/IdeaProjects/理论阶段代码/src/main/resources/sensor.txt"
     val inputStream = env.readTextFile(inputPath)
 
     // 1.先转换成样例类类型（简单转换操作）
@@ -106,3 +106,4 @@ class MyRichMapper extends RichMapFunction[SensorReading, String]{
     //  一般做收尾工作，比如关闭连接，或者清空状态
   }
 }
+
